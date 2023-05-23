@@ -7,7 +7,7 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["FullStackSandbox/FullStackSandbox.csproj", "FullStackSandbox/"]
+COPY ["FullStackSandbox/FullStackSandbox/FullStackSandbox.csproj", "FullStackSandbox/"]
 RUN dotnet restore "FullStackSandbox/FullStackSandbox.csproj"
 COPY . .
 WORKDIR "/src/FullStackSandbox"
